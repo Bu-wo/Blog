@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>	
+			body {
+				background: url(img/步小可同学.jpg) no-repeat center top;
+				position: relative;
+			}
+			.box {
+				position: absolute;
+				left: 50%;
+				top: 100px;
+				margin-left: -100px;
+				width: 210px;
+				height: 360px;	
+				background-color: #FFFFFF;
+				padding: 40px 30px;
+				border: 2px solid #C6C6C6;
+				/*box-shadow: 1px 1px 2px 5px #FFFFFF;*/
+			}
+			input{
+				display: block;
+				width: 200px;
+				height: 20px;
+				border: 1px solid #3878f8;
+			    outline-style: none ;
+			    margin: 20px 0;  
+			    padding-left: 5px;
+			    font-size: 12px;
+			}
+			.line {
+				height: 2px;
+				background-color: #3878f8;
+			}
+			.dt {
+				position: absolute;
+				top: 30px;
+				left: 110px;
+				padding: 0 10px;
+								background-color: #FFFFFF;
+			}
+			.name {
+				margin: 40px 0;
+			}
+			.op select {
+				float: left;
+				height: 24px;
+				border: 1px solid #3878f8;
+				color: #FFFFFF;
+				background-color: #3878f8;
+				outline-style: none ;
+				margin: 20px 0;
+			
+			}
+			.op input {
+				float: left;
+				width: 118px;
+			}
+			
+			
+			.yz input {
+				width: 160px;
+				float: left;
+			}
+			.yz button {
+				float: left;
+				height: 24px;
+				margin: 20px 0;
+				border: 1px solid #3878f8;
+				outline-style: none ;
+				color: #FFFFFF;
+				background-color: #3878f8;
+				
+				
+			}
+			.last {
+				margin-top: 20px;
+				width: 210px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+			<div class="line"></div>
+			<div class="dt">注册</div>
+			
+			<input type="text" placeholder="昵称" class="name"/>
+			<input type="password" placeholder="密码"/>
+			<div class="op">
+				<select name="area" value="area">
+				<option value="">中国大陆</option>
+				<option value="">日本</option>
+				<option value="">韩国</option>
+				<option value="">美国</option>
+				</select>
+			<input type="text" placeholder="请输入常用手机号" />
+			
+			</div>
+			<div style="clear: both;"></div>
+			
+			<div class="yz">
+				<input type="text" placeholder="请输入验证码"/>
+				<button>提交</button><br />
+			</div>
+			
+			<div style="clear: both;"></div>
+			
+			<button class="last">注册</button>
+	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>步小可同学</title>
+		<!--引入facicon.ico网页图标 -->
+		<link rel="shortcut icon" href="favicon.ico"  type="image/x-icon"/>
+		<!-- 引入css 初始化的css 文件 -->
+		<link rel="stylesheet" href="css/base.css">
+		<!-- 引入公共样式的css 文件 -->
+		<link rel="stylesheet" href="css/common.css">
+	</head>
+		<style>
+					@font-face {
+			/*1. 这个字体名称要注意 icomoon*/
+		  font-family: 'icomoon';
+		  /*2. 一定要注意路径的问题*/
+		  src:  url('fonts/icomoon.eot?7kkyc2');
+		  src:  url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+		    url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+		    url('fonts/icomoon.woff?7kkyc2') format('woff'),
+		    url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+		  font-weight: normal;
+		  font-style: normal;
+	}
+			.logo {
+				float: left;
+				margin-left: 10px;
+				margin-right:60px ;
+			}
+			.nav li{
+				float: left;
+				padding-right: 35px;
+				margin: 25px 0;
+			}
+			.nav li a{
+				font-size: 16px;
+			}
+			.serch {
+			}
+			.search input{
+				float: left;
+				height: 22px;
+				padding-left: 10px;
+				margin: 27px 0;
+				font-size: 12px;
+				color: #999999;
+				border: 1px solid #999999; 
+				outline: none;
+				
+			}
+			.search button {
+				float: left;
+				height: 24px;
+				width: 24px;
+				margin: 27px 0;
+				background-color: #447DC2;
+				border: 1px solid transparent; 
+				outline: none;
+				border-radius: 0 2px 2px 0;
+			}
+			.fd {
+				font-family: 'icomoon';
+				font-size: 14px;
+				color: #ffffff;
+			}
+
+			.user {
+				float: left;
+				margin: 30px 0;
+				padding-left: 70px;
+			}
+			.user a {
+				float: right;
+				padding-right: 10px;
+			}
+			/*内容区域*/
+			.nh {
+				height: 72px;
+				background-color: #f8f8fa;
+				padding-left: 15px;
+				box-shadow: 1px 0 1px 1px rgba(0, 0, 0, 0.1);
+
+			}
+			.nh h2 {
+				float: left;
+				line-height: 72px;
+				font-weight: normal;
+				font-size: 18px;
+				color: #333333;
+			}
+			.more {
+				float: right;
+				padding-right: 10px;
+				font-size: 14px;
+				line-height: 72px;
+			}
+			/*设置内容区样式*/
+			.ct {
+				display: block;
+				padding: 25px 35px 25px 15px;
+				margin: 4px 0;
+				background-color: #f8f8fa;
+				box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+			}
+			/*内容区,左边图*/
+			.ct .ctl {
+				padding: 25px 35px 10px 15;
+			}
+			/*内容区,右边样式*/
+			.content .ctr {
+				display: inline-block;
+				padding: 0 0 10px 30px;
+			}
+			.ctr .ctr-h {
+			}
+			.ctr .ctr-h a {
+				display: inline-block;
+				padding: 0 0 10px 0;
+			}
+			.ctl a img {
+				float: left;
+			}
+			.ctl .ctr-h {
+				float: left;
+			}
+			
+			.ctr .ctr-h a h3{
+				font-size: 16px;
+				font-weight: 700;
+				color: #3a76bf;
+			}
+			.ctr .ctr-h p {
+				
+				line-height: 28px;
+				font-size: 12px;
+				color: #333333;
+				
+				white-space: nowrap;
+			    text-overflow: ellipsis;
+			    overflow: hidden;
+			}
+			.ctr-b {
+				margin-top: 15px;
+				display: block;
+			}
+			.ctr-bt{
+				margin-left: 30px;
+				float: left;
+			}
+
+			.ctr-bte{
+				float: right;
+			}
+			.ctr-bt span {
+				display: inline-block;
+				margin-left: 10px;
+				color: #999;
+			}
+			.ctr-b .ctr-bte span {
+				font-family: 'icomoon';
+				font-size: 14px;
+				color: #999;
+			}
+			
+		/*	设置页数*/
+			 .next {
+			 	width: 820px;
+			 	margin: 20px auto;
+			 	text-align: center;
+			
+			 }
+			.next .one{
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				margin-left: 10px;
+				background-color: #3878f8;
+			}
+			.tow, .three{
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				margin-left: 10px;
+				border: 1px solid #c6c6c6;
+			}
+			
+			.next .one a {
+				color: #FFFFFF;
+				font-size: 20px;
+			}
+			.tow a,.three a {
+				color: #c6c6c6;
+				font-size: 20px;
+			}
+			.next i {
+				font-size: 20px;
+				color: #999999;
+			}
+			
+			/*右侧兔子*/
+			.cleft-h {
+				height: 330px;
+				background-color: #f8f8fa;
+				box-shadow: -1px -1px 5px 3px rgba(0, 0, 0, 0.1);
+			}
+			
+			.cleft-h h2{
+				padding: 10px 0 0 15px;
+				font-size: 22px;
+				font-weight: normal;
+			}
+			.cleft-h h2 a {
+				color: #3a76bf;
+			}
+			
+			.cleft p{
+				padding-left: 15px;
+				line-height: 25px;
+			}
+			.cleft-b {
+				height: 320px;
+				margin-top: 25px;
+				background-color: #f8f8fa;
+				box-shadow: -1px -1px 5px 3px rgba(0, 0, 0, 0.1);
+			}
+			.cleft-b h2 {
+				padding: 25px 0 0 15px;
+				font-weight: normal;
+				font-size: 20px;
+			}
+			.cleft-b img {
+				margin: 20px 50px;
+			}
+			
+			/*设置线条*/
+			.line {
+				height: 2px;
+				background-color: #3a76bf;
+			}
+			.link {
+				
+			}
+			.link-list li{
+				float: left;
+				padding: 30px 5px 10px 30px;
+				
+			}
+			.link-s {
+				padding: 0px 0 50px 30px;
+				line-height: 30px;
+				clear: left;
+			}
+			.fr .logo2 img{
+				margin-top: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shortcut ">
+			<div class="w clearfix">
+				<div class="fl">
+					<div class="logo">
+					<img src="img/logo.png"/>
+					</div>
+					
+					<div class="nav">
+						<ul>
+							<li><a href="#">首页</a></li>
+							<li><a href="#">文章  </a></li>
+							<li><a href="#">专题</a></li>
+							<li><a href="#">关于</a></li>
+							<li><a href="#">支持</a></li>
+							<li><a href="3">联系</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="fr">
+					<div class="search">
+					<input type="text" value="请输入关键字"/>
+					<button><span class="fd"></span></button>
+					</div>
+					
+					
+					<div class="user">
+						<span><a href="#" class="dl">登录</a></span>
+						<span><a href="#">注册</a></span>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="content">
+			<div class="w clearfix">
+				
+				<!--左侧内容 -->
+				<div class="fl">
+					<!--头部最新标题-->
+					<div class="nh">
+						<h2><a href="#">最新文章</a></h2>
+						<div class="more">
+							<a href="#">更多></a>
+						</div>
+					</div>
+					
+					<!--主要内容区
+						1、左图
+						2、右上字
+						3、下头像
+					-->
+					<div class="content1">
+						<div class="ct clearfix">
+							<!--1、左图-->
+							<div class="ctl">
+								<a href="#">
+									<img src="./img/btwed.png" alt="" />
+								</a>
+							</div>
+							
+							<!--2、内容区-->
+							<div class="ctr">
+								<div class="ctr-h">	
+									<a href="#"><h3>有那些值得推荐的动漫网站？</h3></a>
+									<p>导读 作为一个资深动漫迷，平时也是攒了不少好的动漫网站
+
+										好的动漫网站必须满足<br />
+										
+										①资源丰富 ②免费不要钱 ③画面高清流畅<br />
+										
+										下面给大家推荐几款我的私藏</p>
+								</div>
+									
+		
+							</div>
+							<!--3、下面头像-->
+							<div class="ctr-b">
+								<div class="ctr-bt">
+									<a href="#"><img src="img/头像.png" alt="" /></a>
+									<span>步小可同学</span>
+								</div>	
+								<div class="ctr-bte">
+									<span></span>
+									<span>2020/11/5</span>
+								</div>
+								</div>
+							</div>							
+					</div>
+					
+					<!--板块2  -->
+					<div class="content1">
+						<div class="ct clearfix">
+							<!--1、左图-->
+							<div class="ctl">
+								<a href="#">
+									<img src="./img/btwed.png" alt="" />
+								</a>
+							</div>
+							
+							<!--2、内容区-->
+							<div class="ctr">
+								<div class="ctr-h">	
+									<a href="#"><h3>有那些值得推荐的动漫网站？</h3></a>
+									<p>导读 作为一个资深动漫迷，平时也是攒了不少好的动漫网站
+
+										好的动漫网站必须满足<br />
+										
+										①资源丰富 ②免费不要钱 ③画面高清流畅<br />
+										
+										下面给大家推荐几款我的私藏</p>
+								</div>
+									
+		
+							</div>
+							<!--3、下面头像-->
+							<div class="ctr-b">
+								<div class="ctr-bt">
+									<a href="#"><img src="img/头像.png" alt="" /></a>
+									<span>步小可同学</span>
+								</div>	
+								<div class="ctr-bte">
+									<span></span>
+									<span>2020/11/5</span>
+								</div>
+								</div>
+							</div>							
+					</div>
+					
+					<!--板块3  -->
+					<div class="content1">
+						<div class="ct clearfix">
+							<!--1、左图-->
+							<div class="ctl">
+								<a href="#">
+									<img src="./img/btwed.png" alt="" />
+								</a>
+							</div>
+							
+							<!--2、内容区-->
+							<div class="ctr">
+								<div class="ctr-h">	
+									<a href="#"><h3>有那些值得推荐的动漫网站？</h3></a>
+									<p>导读 作为一个资深动漫迷，平时也是攒了不少好的动漫网站
+
+										好的动漫网站必须满足<br />
+										
+										①资源丰富 ②免费不要钱 ③画面高清流畅<br />
+										
+										下面给大家推荐几款我的私藏</p>
+								</div>
+									
+		
+							</div>
+							<!--3、下面头像-->
+							<div class="ctr-b">
+								<div class="ctr-bt">
+									<a href="#"><img src="img/头像.png" alt="" /></a>
+									<span>步小可同学</span>
+								</div>	
+								<div class="ctr-bte">
+									<span></span>
+									<span>2020/11/5</span>
+								</div>
+								</div>
+							</div>							
+					</div>
+					
+				<!--分页信息 -->
+					<div class="next">
+						<span class="one">
+							<a href="#">1</a>
+						</span>
+						<span class="tow">
+							<a href="#">2</a>
+						</span>
+						<i>...</i>
+						<span class="three">
+							<a href="#">&gt;</a>
+						</span>
+						
+					</div>
+
+				</div>
+				
+
+				
+				<!--
+                	右侧图片
+                -->
+				<div class="cleft">
+					<div class="fr">
+						<div class="cleft-h">
+							<img src="img/兔子.png" alt="" />
+							<h2><a href="#">步小可同学</a></h2>
+							<p>
+								有趣、有料<br />
+								同一个世界，同一个梦想<br />
+								霍格沃茨魔法魔法学院，在读<br />
+								.....
+							</p>
+						</div>
+						
+						<div class="cleft-b">
+							<h2>微信号</h2>
+							<img src="img/微信.png" alt="" />
+						</div>
+						
+					</div>		
+				</div>	
+			</div>	
+			
+		</div>
+		
+		<div class="line"></div>
+		
+		<div class="link">
+			<div class="w clearfix">
+				<div class="fl">
+					<ul class="link-list">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">支持</a></li>
+						<li><a href="#">链接</a></li>
+						<li><a href="#">戳我吧</a></li>
+						<li><a href="#">三分钟看完本站</a></li>
+					</ul>
+					<div class="link-s">
+						<p>
+						任何反馈和建议，欢迎添加我的微信：bubu91014、微博 @是小可吖<br />
+						Copyright © 2020-2020 步小可同学 保留所有权利。 ICP证：xxxxxxxxx-x  
+						</p>
+					</div>
+				</div>
+
+				
+				<div class="fr">
+					<a href="#" class="logo2">
+						<img src="img/logo2.png" alt="" />
+					</a>	
+				</div>
+			</div>
+		</div>
+		
+
+		
+	</body>
+</html>

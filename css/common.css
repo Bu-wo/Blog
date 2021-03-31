@@ -1,0 +1,15 @@
+/*公共样式*/
+.w {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #f2f2f2;
+}
+.fl {
+	width: 820px;
+	float: left;
+}
+.fr {
+	width: 320px;
+	float: right;
+	padding-right: 2px;
+}
